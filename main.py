@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, make_response, session, redirect, abort
 from data import db_session
 import sqlite3
+import os
 from flask import make_response, jsonify
 from data.linked import Linked
 
@@ -39,4 +40,5 @@ def link():
 
 
 if __name__ == '__main__':
-    main()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
