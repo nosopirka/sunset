@@ -5,12 +5,12 @@ import sqlalchemy.ext.declarative as dec
 
 SqlAlchemyBase = dec.declarative_base()
 
-__factory = False
+__factory = None
 
 
 def create_session() -> Session:
     global __factory
-    return True
+    return __factory()
 
 
 def global_init(db_file):
