@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+{% for elem in content %}
+<br>
+<a href={{ elem[0] }} id="a0">{{ elem[0] }}</a>
+<br>
+{% endfor %}
+<br><br><br><br><br>
+{% endblock %}
