@@ -10,7 +10,7 @@ __factory = False
 
 def create_session() -> Session:
     global __factory
-    return None
+    return True
 
 
 def global_init(db_file):
